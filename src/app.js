@@ -1,10 +1,20 @@
 import React from 'react'
 import Routes from './routes'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import thunkMiddleware from 'redux-thunk'
+import { createLogger } from 'redux-logger'
+import { createStore, applyMiddleware } from 'redux'
 import { root } from './redux/reducers'
 
-const store = createStore(root)
+const loogerMiddlewware = createLogger()
+
+const store = createStore(
+  root,
+  applyMiddleware(
+    thunkMiddleware,
+    loogerMiddlewware
+  )
+)
 
 const App = () => (
   <Provider store={store}>

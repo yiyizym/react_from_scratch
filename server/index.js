@@ -9,10 +9,10 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.post('/api/login', (req, res) => {
   const { username, password } = req.body
-  if (username === 'zhu' && password === '123456') {
+  if (username === 'hana' && password === '123456') {
     res.status(200).send({
       code: 0,
-      value: 'login success'
+      token: '654321'
     })
   } else {
     res.status(401).send({
@@ -20,6 +20,13 @@ app.post('/api/login', (req, res) => {
       value: 'login fail'
     })
   }
+})
+
+app.post('/api/logout', (req, res) => {
+  res.status(200).send({
+    code: 0,
+    value: 'logout success'
+  })
 })
 
 app.listen(port, () => console.log(`backend is listening on port ${port}!`))

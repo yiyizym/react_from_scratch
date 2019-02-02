@@ -2,12 +2,16 @@ import React from 'react'
 import { Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-const PrivateRoute = ({ token, path, component: Component }) => {
-  const isLogin = !!token
+const isLogin = () => {
+  const loginInfo = JSON.parse(window.localStorage.getItem('user') || '{}')
+  return !!loginInfo.token
+}
+
+const PrivateRoute = ({ path, component: Component }) => {
   return (<Route
     path={path}
-    render={() => isLogin
-      ? (<Component />)
+    render={(props) => isLogin()
+      ? (<Component {...props} />)
       : <Redirect to='/login' />
     }
   />)

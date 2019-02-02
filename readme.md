@@ -59,3 +59,15 @@
     - https://scotch.io/tutorials/use-expressjs-to-get-url-and-post-parameters
   - run multiple npm scripts 
     - https://stackoverflow.com/questions/30950032/how-can-i-run-multiple-npm-scripts-in-parallel
+
+
+发送请求与后台接口
+
+- axios
+- 异步 acitons
+  - https://redux.js.org/advanced/async-actions
+  - redux-thunk
+  - redux-logger
+- 用代码实现登录重定向
+  - https://reacttraining.com/react-router/web/api/history
+  - history 对象存在于用 Route 对应生成的 Component 的 props 中

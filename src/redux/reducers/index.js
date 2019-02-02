@@ -1,8 +1,9 @@
+const userInfo = JSON.parse(window.localStorage.getItem('user') || '{}')
 const initialState = {
-  token: null,
+  token: userInfo.token,
   user: {
-    username: null,
-    password: null
+    username: userInfo.username,
+    password: userInfo.password
   }
 }
 
