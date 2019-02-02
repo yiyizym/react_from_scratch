@@ -1,20 +1,20 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Home from './containers/Home'
 import Login from './containers/Login'
 import NonMatch from './containers/NonMatch'
 
-const Router = () => {
+const Routes = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <Switch>
         <Route path='/home' component={Home} />
         <Route path='/login' component={Login} />
         <Route component={NonMatch} />
       </Switch>
-    </BrowserRouter>
+    </Router>
   )
 }
 
-export default Router
+export default Routes

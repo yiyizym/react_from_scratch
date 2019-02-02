@@ -1,10 +1,15 @@
 import React from 'react'
-import Router from './router'
+import Routes from './routes'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import { RootReducer } from './redux/reducers'
 
-class App extends React.Component {
-  render () {
-    return (<Router />)
-  }
-}
+const store = createStore(RootReducer)
+
+const App = () => (
+  <Provider store={store}>
+    <Routes />
+  </Provider>
+)
 
 export default App
