@@ -34,13 +34,17 @@
 
 处理 react-router 跟 redux 的关系
 - react-router
+
   - https://github.com/ReactTraining/react-router/tree/master/packages/react-router
     - react-router 是实现路由功能的核心
     - 这里说如果是在 web 上用 react-router 应该安装 react-router-dom ，后者会安装 react-router 作为依赖
+  - BrowserRouter 与 HashRouter 的区别
+    - config server
+      - webpack-dev-server
+      - https://webpack.js.org/configuration/dev-server/#devserver
   - https://github.com/ReactTraining/react-router
     - 这里有提示到 Redux Integration 看看
       - https://reacttraining.com/react-router/web/guides/redux-integration
       - 有一个 blocked updates 的问题
-  - BrowserRouter 与 HashRouter 的区别
 - redux with react-router
   - https://redux.js.org/advanced/usage-with-react-router
