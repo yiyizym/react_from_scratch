@@ -6,7 +6,7 @@ const initialState = {
   }
 }
 
-export const RootReducer = (state = initialState, action) => {
+export const root = (state = initialState, action) => {
   switch (action.type) {
     case 'LOGIN':
       return {

@@ -5,11 +5,13 @@ import Home from './containers/Home'
 import Login from './containers/Login'
 import NonMatch from './containers/NonMatch'
 
+import PrivateRoute from './components/PrivateRoute'
+
 const Routes = () => {
   return (
     <Router>
       <Switch>
-        <Route path='/home' component={Home} />
+        <PrivateRoute path='/home' component={Home} />
         <Route path='/login' component={Login} />
         <Route component={NonMatch} />
       </Switch>
