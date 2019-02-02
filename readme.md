@@ -32,7 +32,7 @@
 - /dist/index.html directory
 - package.json scripts
 
-处理 react-router 跟 redux 的关系
+处理 react / react-router / redux 的关系:
 - react-router
   - https://github.com/ReactTraining/react-router/tree/master/packages/react-router
     - react-router 是实现路由功能的核心
@@ -50,3 +50,12 @@
     - config server
       - webpack-dev-server
         - https://webpack.js.org/configuration/dev-server/#devserver
+
+搭一个简单的后台:
+
+- expressjs
+  - https://expressjs.com/
+  - 处理 post 请求: LOGIN / LOGOUT
+    - https://scotch.io/tutorials/use-expressjs-to-get-url-and-post-parameters
+  - run multiple npm scripts 
+    - https://stackoverflow.com/questions/30950032/how-can-i-run-multiple-npm-scripts-in-parallel
