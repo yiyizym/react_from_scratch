@@ -1,3 +1,3 @@
 import React from 'react'
-const NonMatch = () => (<div>NonMatch</div>)
+const NonMatch = () => (<div>404 Not Found</div>)
 export default NonMatch
