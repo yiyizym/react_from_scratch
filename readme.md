@@ -1,3 +1,13 @@
+---
+layout: post
+title: 从头搭建一个使用 react+redux+react-router 实现简单功能的页面有多难
+date: 2019-03-01 17:20:28
+excerpt: 直到掉进坑里，我都以为不难。
+categories: 
+- tech
+- frontend
+---
+
 **缘由**
 
 对一个稍微接触过 React 的人来说，要在 2019 年初从头开始搭建一个使用 react+redux+react-router 实现简单功能的页面有多难？
@@ -30,6 +40,8 @@
 
 **实战记录(大致操作及参考信息)**
 
+以下给出的链接可能会过时，但核心思路是找到相应库/工具的官网，认真读一读。
+
 从零到可以运行：
 
 - npm init // 初始化 npm
@@ -48,8 +60,8 @@
   - webpack-cli
     - 在 webpack v4 开始，`npm i webpack` 并不会同时安装 `webpack-cli`
   - babel-loader
-    - https://github.com/babel/babel-loader
-    - https://babeljs.io/docs/en/babel-preset-react
+    - [babel-loader](https://github.com/babel/babel-loader)
+    - [babel-preset-react](https://babeljs.io/docs/en/babel-preset-react)
       - 在这里找到处理 jsx 的 preset
       - .babelrc
   - babel/core
@@ -64,40 +76,40 @@
 处理 react / react-router / redux 的关系:
 
 - react-router
-  - https://github.com/ReactTraining/react-router/tree/master/packages/react-router
+  - [react-router docs](https://github.com/ReactTraining/react-router/tree/master/packages/react-router)
     - react-router 是实现路由功能的核心
     - 这里说如果是在 web 上用 react-router 应该安装 react-router-dom ，后者会安装 react-router 作为依赖
-  - https://github.com/ReactTraining/react-router
+  - [react-router project page](https://github.com/ReactTraining/react-router)
     - BrowserRouter 与 HashRouter 的区别
     - 这里有提示到 Redux Integration 看看
-      - https://reacttraining.com/react-router/web/guides/redux-integration
+      - [redux-integration](https://reacttraining.com/react-router/web/guides/redux-integration)
       - 有一个 blocked updates 的问题
 - redux with react
-  - https://redux.js.org/basics/usage-with-react
-  - https://react-redux.js.org/
+  - [usage-with-react](https://redux.js.org/basics/usage-with-react)
+  - [react-redux](https://react-redux.js.org/)
 - redux with react-router
-  - https://redux.js.org/advanced/usage-with-react-router
+  - [usage-with-react-router](https://redux.js.org/advanced/usage-with-react-router)
     - config server
       - webpack-dev-server
-        - https://webpack.js.org/configuration/dev-server/#devserver
+        - [devserver](https://webpack.js.org/configuration/dev-server/#devserver)
 
 搭一个简单的后台:
 
 - expressjs
-  - https://expressjs.com/
+  - [expressjs](https://expressjs.com/)
   - 处理 post 请求: LOGIN / LOGOUT
-    - https://scotch.io/tutorials/use-expressjs-to-get-url-and-post-parameters
+    - [get parameters](https://scotch.io/tutorials/use-expressjs-to-get-url-and-post-parameters)
   - run multiple npm scripts 
-    - https://stackoverflow.com/questions/30950032/how-can-i-run-multiple-npm-scripts-in-parallel
+    - [stackoverflow](https://stackoverflow.com/questions/30950032/how-can-i-run-multiple-npm-scripts-in-parallel)
 
 
 发送请求与后台接口
 
 - axios
 - 异步 acitons
-  - https://redux.js.org/advanced/async-actions
+  - [async-actions](https://redux.js.org/advanced/async-actions)
   - redux-thunk
   - redux-logger
 - 用代码实现登录重定向
-  - https://reacttraining.com/react-router/web/api/history
+  - [history](https://reacttraining.com/react-router/web/api/history)
   - history 对象存在于用 Route 对应生成的 Component 的 props 中
