@@ -2,13 +2,15 @@
 
 对一个稍微接触过 React 的人来说，要在 2019 年初从头开始搭建一个使用 react+redux+react-router 实现简单功能的页面有多难？
 
-我不清楚。
+我还以为不难，直到掉进坑里。
 
-我只记得自己一上来就采用声称拥有 highly scalable, best developer experience and best practices 的 [react boilerplate](https://github.com/react-boilerplate/react-boilerplate)，结果浪费了两天时间，一行业务代码都没写出来。
+只记得自己一上来就采用声称拥有 highly scalable, best developer experience and best practices 的 [react boilerplate](https://github.com/react-boilerplate/react-boilerplate)，结果浪费了整整两天，一行业务代码都没写出来。
 
-对一个接触 React 不久的人来说，这个采用了诸多模组的模板一点都不友好，每个模组都有自己的一套概念，模组之间怎样接合起来，搞清楚这些都得花一两天，当真正动手去写代码时，才发觉实现一个小功能，几乎要往每个模组都加点「流程代码」，到头来「流程代码」比「业务代码」还要多。
+对一个接触 React 不久的人来说，这个采用了诸多模组的模板一点都不友好，因为每个模组都有自己的一套概念，整理这些概念，以及搞清楚模组之间怎样接合起来，快的话都得花上一两天。
 
-如果只是想通过实现一个简单的功能页面，找 boilerplate 会得不偿失。
+当真正动手去写代码时，为实现一个小功能，几乎要往每个模组都加点「流程代码」，到头来「流程代码」比「业务代码」还要多。
+
+因此如果只是想通过实现一个简单的功能页面，找 boilerplate 会得不偿失。
 
 自己从头开始搭，最大的问题是不知道会花多少时间。
 
@@ -26,24 +28,25 @@
   - 在主页可以登出，登出成功则会重定向到登录页面
   - 进入其他页面，会展示 404 页面
 
-**实战记录**
+**实战记录(大致操作及参考信息)**
 
 从零到可以运行：
 
-- npm init
-- git init
-  - .gitignore
-- Install dependencies
+- npm init // 初始化 npm
+- git init // 初始化 git
+  - .gitignore // 添加文件
+- Install dependencies // 添加依赖
   - react
   - react-dom
   - react-router-dom
     - 注意 react-router 与 react-router-dom 的关系
   - redux
-    - redux 与 react 的关系
+    - 注意 redux 与 react 的关系
   - webpack
     - webpack.config.js
       - mode development
   - webpack-cli
+    - 在 webpack v4 开始，`npm i webpack` 并不会同时安装 `webpack-cli`
   - babel-loader
     - https://github.com/babel/babel-loader
     - https://babeljs.io/docs/en/babel-preset-react
@@ -52,8 +55,11 @@
   - babel/core
   - babel/preset-env
 - /src/index.js/app.js
-- /dist/index.html directory
-- package.json scripts
+  - source files
+- /dist/index.html 
+  - output directory
+- package.json 
+  - scripts 字段
 
 处理 react / react-router / redux 的关系:
 
